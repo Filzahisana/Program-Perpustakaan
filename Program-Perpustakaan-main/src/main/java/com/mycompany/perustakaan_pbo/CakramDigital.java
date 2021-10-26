@@ -1,3 +1,4 @@
+package com.mycompany.perustakaan_pbo;
 public class CakramDigital extends Koleksi {
     private String jenisMedia;
 

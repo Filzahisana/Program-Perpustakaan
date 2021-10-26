@@ -1,3 +1,4 @@
+package com.mycompany.perustakaan_pbo;
 public class Koran extends Koleksi {
     private String jenisTerbit;
 

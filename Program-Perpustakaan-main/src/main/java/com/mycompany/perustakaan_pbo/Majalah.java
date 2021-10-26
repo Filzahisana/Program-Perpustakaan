@@ -1,3 +1,4 @@
+package com.mycompany.perustakaan_pbo;
 public class Majalah extends Koleksi {
     private int noEdisi;
     private String jenisTerbit;

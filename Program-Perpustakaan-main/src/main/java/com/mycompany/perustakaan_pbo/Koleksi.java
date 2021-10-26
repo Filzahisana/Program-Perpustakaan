@@ -1,3 +1,4 @@
+package com.mycompany.perustakaan_pbo;
 public abstract class Koleksi {
     protected int noKoleksi;
     protected String nama, penerbit, tanggalTerbit, jenis, status;
