@@ -24,4 +24,3 @@ public class Koran extends Koleksi {
     }
 }
 
-
