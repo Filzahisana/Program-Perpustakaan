@@ -1,6 +1,15 @@
 package com.mycompany.perustakaan_pbo;
 import java.util.*;
 
+import com.mycompany.perustakaan_pbo.models.Buku;
+import com.mycompany.perustakaan_pbo.models.CakramDigital;
+import com.mycompany.perustakaan_pbo.models.Koran;
+import com.mycompany.perustakaan_pbo.models.Majalah;
+import com.mycompany.perustakaan_pbo.services.BukuServices;
+import com.mycompany.perustakaan_pbo.services.CakramDigitalServices;
+import com.mycompany.perustakaan_pbo.services.MajalahServices;
+import com.mycompany.perustakaan_pbo.services.KoranService;
+
 public class Main {
     static OpenLibrary openLibrary = new OpenLibrary();
     static Scanner scanner = new Scanner(System.in);
@@ -14,134 +23,13 @@ public class Main {
         pilih = scanner.nextInt();
         switch (pilih) {
             case 1:
-                jenis = "Buku";
-                System.out.print("Masukkan Nomor Koleksi : ");
-                noKoleksi = scanner.nextInt();
-                System.out.print("Masukkan Judul : ");
-                namaKoleksi = scanner.next();
-                System.out.print("Masukkan Pihak Penerbit : ");
-                penerbit = scanner.next();
-                System.out.print("Masukkan Tanggal Terbit : ");
-                tangter = scanner.next();
-                System.out.println("Status[1.Ada\t2.Rusak\t3.Hilang]");
-                System.out.print("Pilih : ");
-                pilihStatus = scanner.nextInt();
-                switch (pilihStatus) {
-                    case 1:
-                        status = "Ada";
-                        break;
-                    case 2:
-                        status = "Rusak";
-                        break;
-                    case 3:
-                        status = "Hilang";
-                        break;
-                    default:
-                        status = "Koleksi";
-                        break;
-                }
-                System.out.print("Masukkan Pengarang : ");
-                String pengarang = scanner.next();
-                System.out.print("Masukkan ISSN : ");
-                String issn = scanner.next();
-                System.out.print("Masukkan ISBN : ");
-                String isbn = scanner.next();
-                System.out.print("Masukkan DOI : ");
-                String doi = scanner.next();
-                System.out.print("Masukkan Arxiv ID : ");
-                String arxivId = scanner.next();
-                System.out.print("Masukkan Tahun Masuk : ");
-                int tahunMasuk = scanner.nextInt();
-                openLibrary.addKoleksi(new Buku(noKoleksi, namaKoleksi, penerbit, tangter, jenis, status, pengarang,
-                        issn, isbn, doi, arxivId, tahunMasuk));
+                BukuServices.tambahData();
                 break;
             case 2:
-                jenis = "Majalah";
-                System.out.print("Masukkan Nomor Koleksi : ");
-                noKoleksi = scanner.nextInt();
-                System.out.print("Masukkan Judul : ");
-                namaKoleksi = scanner.next();
-                System.out.print("Masukkan Pihak Penerbit : ");
-                penerbit = scanner.next();
-                System.out.print("Masukkan Tanggal Terbit : ");
-                tangter = scanner.next();
-                System.out.println("Status[1.Ada\t2.Rusak\t3.Hilang]");
-                System.out.print("Pilih : ");
-                pilihStatus = scanner.nextInt();
-                switch (pilihStatus) {
-                    case 1:
-                        status = "Ada";
-                        break;
-                    case 2:
-                        status = "Rusak";
-                        break;
-                    case 3:
-                        status = "Hilang";
-                        break;
-                    default:
-                        status = "Koleksi";
-                        break;
-                }
-                System.out.print("Masukkan No Edisi : ");
-                int noEdisi = scanner.nextInt();
-                System.out.println("Jenis Terbit[1.Mingguan\t2.Bulanan]");
-                System.out.print("Pilih : ");
-                int jenisTerbit = scanner.nextInt();
-                String jenisMajalah;
-                switch (jenisTerbit) {
-                    case 1:
-                        jenisMajalah = "Mingguan";
-                        break;
-                    case 2:
-                        jenisMajalah = "Bulanan";
-                        break;
-                    default:
-                        jenisMajalah = "";
-                        break;
-                }
-                openLibrary.addKoleksi(new Majalah(noKoleksi, namaKoleksi, penerbit, tangter, jenis, status, noEdisi,
-                        jenisMajalah));
+                MajalahServices.tambahData();
                 break;
             case 3:
-                jenis = "Koran";
-                System.out.print("Masukkan Nomor Koleksi : ");
-                noKoleksi = scanner.nextInt();
-                System.out.print("Masukkan Judul : ");
-                namaKoleksi = scanner.next();
-                System.out.print("Masukkan Pihak Penerbit : ");
-                penerbit = scanner.next();
-                System.out.print("Masukkan Tanggal Terbit : ");
-                tangter = scanner.next();
-                System.out.println("Status[1.Ada\t2.Rusak\t3.Hilang]");
-                System.out.print("Pilih : ");
-                pilihStatus = scanner.nextInt();
-                switch (pilihStatus) {
-                    case 1:
-                        status = "Ada";
-                        break;
-                    case 2:
-                        status = "Rusak";
-                        break;
-                    case 3:
-                        status = "Hilang";
-                        break;
-                    default:
-                        status = "Koleksi";
-                        break;
-                }
-                System.out.println("Jenis Terbit[1.Harian\t2.Mingguan]");
-                System.out.print("Pilih : ");
-                int pilihJenis = scanner.nextInt();
-                String jenisKoran = "Harian";
-                switch (pilihJenis) {
-                    case 1:
-                        jenisKoran = "Harian";
-                        break;
-                    case 2:
-                        jenisKoran = "Mingguan";
-                        break;
-                }
-                openLibrary.addKoleksi(new Koran(noKoleksi, namaKoleksi, penerbit, tangter, jenis, status, jenisKoran));
+                CakramDigitalServices.tambahData();
                 break;
             case 4:
                 jenis = "Cakram Digital";

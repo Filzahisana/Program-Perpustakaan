@@ -1,6 +1,6 @@
-package com.mycompany.perustakaan_pbo;
+package com.mycompany.perustakaan_pbo.models;
 public abstract class Koleksi {
-    protected int noKoleksi;
+    private int noKoleksi;
     protected String nama, penerbit, tanggalTerbit, jenis, status;
 
     public Koleksi(int noKoleksi, String nama, String penerbit, String tanggalTerbit, String jenis, String status) {

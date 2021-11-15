@@ -1,4 +1,6 @@
 package com.mycompany.perustakaan_pbo;
+import com.mycompany.perustakaan_pbo.models.Koleksi;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 

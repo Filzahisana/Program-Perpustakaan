@@ -1,4 +1,4 @@
-package com.mycompany.perustakaan_pbo;
+package com.mycompany.perustakaan_pbo.models;
 public class Buku extends Koleksi {
     private String pengarang, issn, isbn, doi, arxivId;
     private int tahunMasuk;

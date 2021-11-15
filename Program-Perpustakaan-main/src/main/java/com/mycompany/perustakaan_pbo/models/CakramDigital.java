@@ -1,4 +1,7 @@
-package com.mycompany.perustakaan_pbo;
+package com.mycompany.perustakaan_pbo.models;
+
+import com.mycompany.perustakaan_pbo.models.Koleksi;
+
 public class CakramDigital extends Koleksi {
     private String jenisMedia;
 
