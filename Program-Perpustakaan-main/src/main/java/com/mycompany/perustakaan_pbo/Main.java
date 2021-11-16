@@ -1,6 +1,11 @@
 package com.mycompany.perustakaan_pbo;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.mycompany.perustakaan_pbo.models.Buku;
 import com.mycompany.perustakaan_pbo.models.CakramDigital;
 import com.mycompany.perustakaan_pbo.models.Koran;
@@ -9,6 +14,8 @@ import com.mycompany.perustakaan_pbo.services.BukuServices;
 import com.mycompany.perustakaan_pbo.services.CakramDigitalServices;
 import com.mycompany.perustakaan_pbo.services.MajalahServices;
 import com.mycompany.perustakaan_pbo.services.KoranService;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 public class Main {
     static OpenLibrary openLibrary = new OpenLibrary();
@@ -233,8 +240,31 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         dummy();
         runThis();
-    }
-}
+        //read in string
+        String data = new String(Files.readAllBytes(Paths.get("./user.json")));
+
+        //read as json array
+        JSONArray jsonArray = new JSONArray(data);
+        for (int i=0; i< jsonArray.length();i++){
+
+            //parse in json object
+            JSONObject object = jsonArray.getJSONObject(i);
+            or
+            //JSONPObject object =  jsonArray.getJSONObject(i);
+            String str = jsonArray.get(i).toString();
+            JSONObject object1 = new JSONObject(str);
+
+            String namaKoleksi = object1.getString(key."namaKoleksi");
+            int  noKoleksi = object1.getInt(key:"noKoleksi");
+            System.out.println("NamenamaKoleksi: "+ namaKoleksi);
+            System.out.println("noKoleksi: "+ noKoleksi);        }
+
+
+
+
+
+    }}
+

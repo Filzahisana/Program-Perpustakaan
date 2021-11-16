@@ -1,0 +1,18 @@
+[
+  {
+    "noKoleksi" : 121,
+    "namaKoleksi": "Masakku",
+    "penerbit":  "Jaja al-kindy",
+    "tangter": "20 Januari 2013",
+    "jenis" : "buku" ,
+    "status": "ada",
+  },
+  {
+    "noKoleksi" : 122,
+    "namaKoleksi": "Nasiku",
+    "penerbit":  "Ahmad KKarunia",
+    "tangter": "15 Maret 2017",
+    "jenis" : "buku" ,
+    "status": "ada"
+  }
+]

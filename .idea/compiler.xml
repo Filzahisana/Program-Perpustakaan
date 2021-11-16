@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Perustakaan_PBO" />
+        <module name="perpus-pbo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="perpus-pbo" target="1.5" />
       <module name="Perustakaan_PBO" target="16" />
     </bytecodeTargetLevel>
   </component>

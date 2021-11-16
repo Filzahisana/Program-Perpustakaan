@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Program-Perpustakaan-main/Perustakaan_PBO.iml" filepath="$PROJECT_DIR$/Program-Perpustakaan-main/Perustakaan_PBO.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/perpus-pbo.iml" filepath="$PROJECT_DIR$/.idea/perpus-pbo.iml" />
     </modules>
   </component>
 </project>
