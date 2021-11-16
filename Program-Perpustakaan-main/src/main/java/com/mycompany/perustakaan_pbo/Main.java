@@ -1,21 +1,13 @@
 package com.mycompany.perustakaan_pbo;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.*;
-
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.mycompany.perustakaan_pbo.models.Buku;
 import com.mycompany.perustakaan_pbo.models.CakramDigital;
 import com.mycompany.perustakaan_pbo.models.Koran;
 import com.mycompany.perustakaan_pbo.models.Majalah;
 import com.mycompany.perustakaan_pbo.services.BukuServices;
-import com.mycompany.perustakaan_pbo.services.CakramDigitalServices;
-import com.mycompany.perustakaan_pbo.services.MajalahServices;
 import com.mycompany.perustakaan_pbo.services.KoranService;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import com.mycompany.perustakaan_pbo.services.MajalahServices;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
     static OpenLibrary openLibrary = new OpenLibrary();
@@ -36,7 +28,7 @@ public class Main {
                 MajalahServices.tambahData();
                 break;
             case 3:
-                CakramDigitalServices.tambahData();
+                KoranService.tambahData();
                 break;
             case 4:
                 jenis = "Cakram Digital";
@@ -244,27 +236,32 @@ public class Main {
         dummy();
         runThis();
         //read in string
-        String data = new String(Files.readAllBytes(Paths.get("./user.json")));
+//        String data = new String(Files.readAllBytes(Paths.get("./user.json")));
+//
+//        //read as json array
+//        JSONArray jsonArray = new JSONArray(data);
+//        for (int i=0; i< jsonArray.length();i++){
+//
+//            //parse in json object
+//            JSONObject object = jsonArray.getJSONObject(i);
+//            or
+//            //JSONPObject object =  jsonArray.getJSONObject(i);
+//            String str = jsonArray.get(i).toString();
+//            JSONObject object1 = new JSONObject(str);
+//
+//            String namaKoleksi = object1.getString(key."namaKoleksi");
+//            String penerbit = object1.getString(key."penerbit");
+//            String tangter = object1.getString(key."tangter");
+//            String jenis = object1.getString(key."jenis");
+//
+//            int  noKoleksi = object1.getInt(key:"noKoleksi");
+//            System.out.println("NamenamaKoleksi: "+ namaKoleksi);
+//            System.out.println("noKoleksi: "+ noKoleksi);
+//            System.out.println("penerbit: "+ penerbit);
+//            System.out.println("tangter: "+ tangter);
+//            System.out.println("jenis: "+ jenis);
+    }
 
-        //read as json array
-        JSONArray jsonArray = new JSONArray(data);
-        for (int i=0; i< jsonArray.length();i++){
 
-            //parse in json object
-            JSONObject object = jsonArray.getJSONObject(i);
-            or
-            //JSONPObject object =  jsonArray.getJSONObject(i);
-            String str = jsonArray.get(i).toString();
-            JSONObject object1 = new JSONObject(str);
-
-            String namaKoleksi = object1.getString(key."namaKoleksi");
-            int  noKoleksi = object1.getInt(key:"noKoleksi");
-            System.out.println("NamenamaKoleksi: "+ namaKoleksi);
-            System.out.println("noKoleksi: "+ noKoleksi);        }
-
-
-
-
-
-    }}
+    }
 

@@ -13,7 +13,7 @@ public class MajalahServices {
     static String penerbit;
     static String tangter;
     static int noKoleksi;
-    static int pilihStatus;-
+    static int pilihStatus;
 
     static Scanner scanner = new Scanner(System.in);
     static OpenLibrary openLibrary = new OpenLibrary();
